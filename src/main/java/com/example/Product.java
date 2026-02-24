@@ -24,7 +24,6 @@ public class Product {
         return stock;
     }
 
-    // Setters
     public void setId(String id) {
         this.id = id;
     }
@@ -36,16 +35,19 @@ public class Product {
     public void setPrice(double price) {
         if (price >= 0) {
             this.price = price;
+        } else {
+            System.out.println("Error: Price cannot be negative.");
         }
     }
 
     public void setStock(int stock) {
         if (stock >= 0) {
             this.stock = stock;
+        } else {
+            System.out.println("Error: Stock cannot be negative.");
         }
     }
 
-    // toString
     @Override
     public String toString() {
         return "Product [ID: " + id +
